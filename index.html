@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Lakshmi Elevators - Digital Business NFC Landing page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    /* small extra styling to complement Tailwind */
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white flex items-center justify-center p-4">
+  <main class="w-full max-w-xl">
+    <section 
+  class="bg-slate-800/60 glass rounded-2xl p-6 shadow-2xl bg-cover bg-center" 
+  style="background-image: url('bgelevator.jpg');">
+  
+  
+      <!-- Header / Profile -->
+      <div class="flex items-center gap-4">
+       <div class="w-25 h-25 rounded-full overflow-hidden">
+  <img src="logo1.png" alt="A descriptive alt text" class="w-full h-full object-cover" style="background-color: white; padding: 15px;">
+</div>
+        <div>
+          <h1 class="text-2xl font-bold" style="color: black; font-style: italic;">Sri Lakshmi Elevators</h1>
+          <p class="text-sm text-slate-300 font-semibold" style="color: whitesmoke;">Malli Mohan Raju</p>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="mt-6 grid gap-3" style="color: white;">
+        <a href="tel:+918125913165" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-white/6 hover:bg-white/10">
+          <div class="flex items-center gap-3"><i class='bx bx-phone-call text-2xl'></i><div>
+            <div class="text-sm">Call Now</div>
+            <div class="text-xs text-slate-400" style="color: beige;">+91 81259 13165</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+
+      
+        <a href="https://www.instagram.com/" target="_blank" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-white/6 hover:bg-white/10">
+          <div class="flex items-center gap-3"><i class='bx bxl-instagram text-2xl'></i><div>
+            <div class="text-sm">Instagram</div>
+            <div class="text-xs text-slate-400" style="color: beige;">ikshana_studios</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+
+        <!-- <a href="https://facebook.com/placeholder" target="_blank" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-white/6 hover:bg-white/10">
+          <div class="flex items-center gap-3"><i class='bx bxl-facebook-square text-2xl'></i><div>
+            <div class="text-sm">Facebook</div>
+            <div class="text-xs text-slate-400">Page</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a> -->
+
+        <a href="https://share.google/" target="_blank" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-white/6 hover:bg-white/10">
+          <div class="flex items-center gap-3"><i class='bx bx-map text-2xl'></i><div>
+            <div class="text-sm">Find Us</div>
+            <div class="text-xs text-slate-400" style="color: beige;">Open in Google Maps</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+
+        <!-- <a href="https://quickpainters.in/" target="_blank" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-white/6 hover:bg-white/10">
+          <div class="flex items-center gap-3"><i class='bx bx-globe text-2xl'></i><div>
+            <div class="text-sm">Website</div>
+            <div class="text-xs text-slate-400">Visit our site</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a> -->
+
+        <a id="whatsappMain" href="#" class="btn-action flex items-center justify-between px-4 py-3 rounded-xl bg-emerald-600/90 hover:brightness-105">
+          <div class="flex items-center gap-3"><i class='bx bxl-whatsapp text-2xl'></i><div>
+            <div class="text-sm">WhatsApp Chat</div>
+            <div class="text-xs text-slate-200">Chat with us instantly</div>
+          </div></div>
+          <i class='bx bx-chevron-right'></i>
+        </a>
+
+       <!-- Save Contact Button -->
+        <button id="saveContactBtn" class="flex items-center justify-between px-4 py-3 rounded-xl bg-blue-600/90 hover:brightness-105">
+          <div class="flex items-center gap-3">
+            <i class='bx bx-save text-2xl'></i>
+            <div>
+              <div class="text-sm">Save Contact</div>
+              <div class="text-xs text-slate-200">Add our contact to your phone</div>
+            </div>
+          </div>
+          <i class='bx bx-chevron-right'></i>
+        </button>
+
+      <!-- Embedded video -->
+      <!-- <div class="mt-6">
+        <h3 class="text-sm text-slate-300 mb-2">Our Video Work</h3>
+        <div class="aspect-video rounded-xl overflow-hidden">
+          <iframe src="ikshana video.mp4" title="Video placeholder" allowfullscreen class="w-full h-full"></iframe>
+        </div>
+      </div> -->
+
+      <!-- Image Gallery Section -->
+      <div class="mt-6">
+        <h3 class="text-sm text-slate-300 mb-4" style="color: beige;">Our Pictures Gallery</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Image 1 -->
+          <div class="w-full overflow-hidden rounded-xl">
+            <img src="johnson.jpeg" alt="Work 1" 
+                class="w-full h-50 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openModal(this.src)">
+          </div>
+
+          <!-- Image 2 -->
+          <div class="w-full overflow-hidden rounded-xl">
+            <img src="kone.jpeg" alt="Work 2" 
+                class="w-full h-50 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openModal(this.src)">
+          </div>
+
+          <!-- Image 3 -->
+          <div class="w-full overflow-hidden rounded-xl">
+            <img src="schindler.webp" alt="Work 3" 
+                class="w-full h-50 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openModal(this.src)">
+          </div>
+
+          <!-- Image 4 -->
+          <div class="w-full overflow-hidden rounded-xl">
+            <img src="otis.jpg" alt="Work 4" 
+                class="w-full h-50 object-cover rounded-xl shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300"
+                onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Fullscreen Modal -->
+      <div id="imageModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 p-4">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
+        <img id="modalImage" src="" class="max-h-[90vh] max-w-[90vw] rounded-xl shadow-2xl border-2 border-white">
+      </div>
+
+
+      <!-- Instagram Posts Section -->
+<!-- <div class="mt-6">
+  <h3 class="text-sm text-slate-300 mb-4">Our Instagram Gallery</h3>
+  
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"> -->
+    <!-- Post 1 -->
+    <!-- <div class="w-full overflow-hidden rounded-xl">
+      <blockquote 
+        class="instagram-media w-full" 
+        data-instgrm-permalink="https://www.instagram.com/p/DIqSKpZvJzz/?igsh=OXA2a2NxcW5kdW14" 
+        data-instgrm-version="14"
+        style="max-width: 100% !important; width: 100% !important; margin: auto;">
+      </blockquote>
+    </div> -->
+
+    <!-- Post 2 -->
+    <!-- <div class="w-full overflow-hidden rounded-xl">
+      <blockquote 
+        class="instagram-media w-full" 
+        data-instgrm-permalink="https://www.instagram.com/p/DHyIedmShi1/?igsh=Mjg0Z2x6YzYxa3E=" 
+        data-instgrm-version="14"
+        style="max-width: 100% !important; width: 100% !important; margin: auto;">
+      </blockquote>
+    </div> -->
+
+    <!-- Post 3 -->
+    <!-- <div class="w-full overflow-hidden rounded-xl">
+      <blockquote 
+        class="instagram-media w-full" 
+        data-instgrm-permalink="https://www.instagram.com/p/DIq2KXzPHM0/?igsh=M2FscmJkaXQyYnhj" 
+        data-instgrm-version="14"
+        style="max-width: 100% !important; width: 100% !important; margin: auto;">
+      </blockquote>
+    </div> -->
+
+    <!-- Post 4 -->
+    <!-- <div class="w-full overflow-hidden rounded-xl">
+      <blockquote 
+        class="instagram-media w-full" 
+        data-instgrm-permalink="https://www.instagram.com/p/C-hvTB1SmiA/?igsh=MXR1MTB2eHloMzlleg==" 
+        data-instgrm-version="14"
+        style="max-width: 100% !important; width: 100% !important; margin: auto;">
+      </blockquote>
+    </div>
+  </div>
+</div> -->
+
+<!-- Instagram Embed Script -->
+<!-- <script async src="//www.instagram.com/embed.js"></script> -->
+      <!-- End Instagram Posts Section -->
+
+
+      <!-- Email subscribe -->
+      <!-- <div class="mt-6 bg-slate-900/40 p-4 rounded-xl">
+        <h3 class="text-sm font-semibold">Subscribe for offers</h3>
+        <p class="text-xs text-slate-400">We'll notify you about discounts and new pizzas.</p>
+        <form id="subscribeForm" class="mt-3 flex gap-2">
+          <input id="subscribeEmail" type="email" placeholder="Your email" class="flex-1 rounded-md p-2 bg-transparent border border-slate-700 text-white text-sm" required>
+          <button class="px-4 py-2 rounded-md bg-amber-500 text-slate-900 text-sm">Subscribe</button>
+        </form>
+      </div> -->
+
+      <!-- Contact form (Get in touch) -->
+      <div class="mt-6 bg-slate-900/40 p-4 rounded-xl" style="backdrop-filter: blur(5px);">
+        <h3 class="text-lg font-semibold">Get in touch</h3>
+        <p class="text-sm text-slate-400 font-semibold" style="color: beige;">Fill the form and we'll reach you. On submit it opens WhatsApp with your message.</p>
+        <form id="contactForm" class="mt-3 grid gap-2">
+          <input id="cName" type="text" placeholder="Your name" class="rounded-md p-2 bg-black border border-slate-700 text-white text-sm" required>
+          <input id="cPhone" type="tel" placeholder="Phone Number" class="rounded-md p-2 bg-black border border-slate-700 text-white text-sm" required>
+          <textarea id="cMessage" rows="3" placeholder="Message" class="rounded-md p-2 bg-black border border-slate-700 text-white text-sm" required></textarea>
+          <div class="flex gap-2">
+            <button type="submit" class="flex-1 px-4 py-2 rounded-md bg-emerald-600/90">Connect on WhatsApp</button>
+            <!-- <button id="contactSave" type="button" class="px-4 py-2 rounded-md bg-slate-700/60">Save & Send</button> -->
+          </div>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-6 text-center text-xs text-slate-400" style="font-weight: semibold; color: white;">
+        © 2025 — Sri Lakshmi Elevators <br>• Built for NFC By Samrat_designs <br>• +91-8247634398
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // ---------- Configuration (placeholders) ----------
+    const CONFIG = {
+      phone: '+918125913165', // include country code
+      businessName: 'Sri Lakshmi Elevators',
+      email: 'srilakshmielevatorsnlr@gmail.com',
+      website: '', // optional',
+      address: 'D.No:16/16/127/1,korivivari kandriga,nellore-524003',
+      title: 'Owner',
+    };
+
+    // ---------- WhatsApp main button (quick chat) ----------
+    document.getElementById('whatsappMain').addEventListener('click', (e) => {
+      e.preventDefault();
+      const text = encodeURIComponent(`${CONFIG.businessName} — Hello! I want to chat.`);
+      const wa = `https://wa.me/${CONFIG.phone.replace(/[^0-9]/g,'')}?text=${text}`;
+      window.open(wa, '_blank');
+    });
+
+    // ---------- Contact form -> WhatsApp ----------
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendContactOnWhatsApp();
+    });
+
+    document.getElementById('contactSave').addEventListener('click', () => {
+      // also save contact to localStorage and then open WhatsApp
+      const name = document.getElementById('cName').value.trim();
+      const phone = document.getElementById('cPhone').value.trim();
+      const msg = document.getElementById('cMessage').value.trim();
+      if (!name || !phone || !msg) { alert('Please fill all fields'); return; }
+      // optional: store locally
+      localStorage.setItem('latest_inquiry', JSON.stringify({name,phone,msg,at:Date.now()}));
+      // open whatsapp
+      const text = encodeURIComponent(`New Inquiry from NFC Page:%0AName: ${name}%0APhone: ${phone}%0AMessage: ${msg}`);
+      const wa = `https://wa.me/${CONFIG.phone.replace(/[^0-9]/g,'')}?text=${text}`;
+      window.open(wa, '_blank');
+    });
+
+    function sendContactOnWhatsApp(){
+      const name = document.getElementById('cName').value.trim();
+      const phone = document.getElementById('cPhone').value.trim();
+      const msg = document.getElementById('cMessage').value.trim();
+      if (!name || !phone || !msg) { alert('Please fill all fields'); return; }
+      const text = encodeURIComponent(`New Inquiry from NFC Page:%0AName: ${name}%0APhone: ${phone}%0AMessage: ${msg}`);
+      const wa = `https://wa.me/${CONFIG.phone.replace(/[^0-9]/g,'')}?text=${text}`;
+      window.open(wa, '_blank');
+    }
+
+    // ---------- Subscribe form (simple) ----------
+    // document.getElementById('subscribeForm').addEventListener('submit', (e)=>{
+    //   e.preventDefault();
+    //   const mail = document.getElementById('subscribeEmail').value.trim();
+    //   if(!mail){ alert('Enter email'); return; }
+    //   // For now we store locally; adapt to your backend later
+    //   const subs = JSON.parse(localStorage.getItem('subscribers')||'[]');
+    //   subs.push({email:mail, at:Date.now()});
+    //   localStorage.setItem('subscribers', JSON.stringify(subs));
+    //   document.getElementById('subscribeEmail').value = '';
+    //   alert('Subscribed — stored locally. Integrate with your email provider to collect real leads.');
+    // });
+
+    // Open modal with clicked image
+    function openModal(src) {
+      document.getElementById('imageModal').classList.remove('hidden');
+      document.getElementById('modalImage').src = src;
+    }
+
+    // Close modal
+    function closeModal() {
+      document.getElementById('imageModal').classList.add('hidden');
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+
+    // ---------- vCard generation & save contact ----------
+    document.addEventListener("DOMContentLoaded", () => {
+      // ** THE ERRONEOUS CODE HAS BEEN REMOVED FROM HERE **
+
+      // Function to build the vCard text
+      function buildVCard() {
+        const lines = [];
+        lines.push('BEGIN:VCARD');
+        lines.push('VERSION:3.0');
+        lines.push(`FN:${CONFIG.businessName}`);
+        lines.push(`ORG:${CONFIG.businessName}`);
+        if (CONFIG.title) lines.push(`TITLE:${CONFIG.title}`);
+        lines.push(`TEL;TYPE=WORK,VOICE:${CONFIG.phone}`);
+        if (CONFIG.email) lines.push(`EMAIL;TYPE=INTERNET:${CONFIG.email}`);
+        if (CONFIG.website) lines.push(`URL:${CONFIG.website}`);
+        if (CONFIG.address) lines.push(`ADR;TYPE=WORK:;;${CONFIG.address};;;;`);
+        lines.push('END:VCARD');
+        return lines.join('\r\n');
+      }
+
+      // Click event for Save Contact button
+      const saveBtn = document.getElementById('saveContactBtn');
+      if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+          const vcardData = buildVCard();
+
+          // Create a downloadable .vcf file
+          const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8' });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `${CONFIG.businessName.replace(/\s+/g, '_')}.vcf`;
+          document.body.appendChild(a);
+          a.click(); // Triggers the download
+          a.remove();
+
+          // Release the object URL to free memory
+          URL.revokeObjectURL(url);
+        });
+      } else {
+        console.error("Save Contact button not found!");
+      }
+    });
+
+
+    // ---------- Optionally auto-trigger download for better UX on some devices ----------
+    // Note: browsers may block auto-downloads; keep user-initiated clicks as above.
+
+    // ---------- Small UX: smooth focus and keyboard handling ----------
+    document.querySelectorAll('input,textarea,button,a').forEach(el=>{
+      el.addEventListener('keydown', (ev)=>{
+        if(ev.key === 'Enter' && el.tagName === 'INPUT'){
+          // let the forms handle submit
+        }
+      });
+    });
+
+    // ---------- Analytics placeholder ----------
+    /*
+      To add Google Analytics or any other tracking paste their script near the top
+      and call appropriate events. For privacy, inform users if you collect emails.
+    */
+  </script>
+</body>
+</html>
